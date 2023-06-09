@@ -4,6 +4,11 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 
 def main():
+    """ Asks annotater which what the name of the novel is,
+        (eg Couperus_ElineVere) (do not type .tsv)
+        where he/she added the addresseetypes to,
+        and inserts these types in a xml file
+        (eg Couperus_ElineVere.xml) xml need to be attached."""
     current_f = input("Annotated file that needs added addresseetypes to xml:")
     xmlname = input("What should the name be of the annotated xml file?")
     addtypes = pd.read_csv(current_f + '_addtype.tsv', sep='\t')
