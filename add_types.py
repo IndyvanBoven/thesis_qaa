@@ -4,6 +4,9 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 
 def main():
+    """Creates tsv files with id, quote, addressee and empty addresseetype.
+       Annotater can fill this in a sheet and save this. 
+       to_xml.py will insert the types back in the xml annotions files."""
     #f = 'zijndood(12).xml'
     f = input("Annotated xml file that needs addresseetypes:")
     tree = ET.parse(f)
